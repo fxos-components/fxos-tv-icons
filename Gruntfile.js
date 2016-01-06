@@ -12,12 +12,12 @@ module.exports = function(grunt) {
         src: 'images/*.svg',
         dest: 'output/embedded/',
         options: {
-          font: 'smart-icons',
+          font: 'fxos-tv-icons',
           types: 'ttf',
           embed: 'ttf',
           ligatures: true,
           hashes: false,
-          template: 'templates/smart-icons.css',
+          template: 'templates/fxos-tv-icons.css',
           htmlDemoTemplate: 'templates/index.html'
         }
       },
@@ -29,12 +29,13 @@ module.exports = function(grunt) {
         destCss: 'output/files/',
         destHtml: 'output/files/',
         options: {
-          font: 'smart-icons',
+          font: 'fxos-tv-icons',
           types: 'ttf',
-          template: 'templates/smart-icons.css',
+          template: 'templates/fxos-tv-icons.css',
           htmlDemoTemplate: 'templates/index.html',
           ligatures: true,
           hashes: false,
+          autoHint: false,
           templateOptions: {
             baseClass: '',
             classPrefix: '',
@@ -49,13 +50,13 @@ module.exports = function(grunt) {
     // doesn't let us specify filenames).
     rename: {
       'css-embedded': {
-        src: 'output/embedded/smart-icons.css',
-        dest: 'smart-icons-embedded.css',
+        src: 'output/embedded/fxos-tv-icons.css',
+        dest: 'fxos-tv-icons-embedded.css',
       },
 
       css: {
-        src: 'output/files/smart-icons.css',
-        dest: 'smart-icons.css',
+        src: 'output/files/fxos-tv-icons.css',
+        dest: 'fxos-tv-icons.css',
       },
 
       fonts: {
@@ -64,7 +65,7 @@ module.exports = function(grunt) {
       },
 
       example: {
-        src: 'output/files/smart-icons.html',
+        src: 'output/files/fxos-tv-icons.html',
         dest: 'index.html'
       }
     },
